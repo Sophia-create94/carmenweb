@@ -1,0 +1,45 @@
+.header {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+.title-link:hover {
+  text-decoration: none;
+}
+
+.logo {
+  width: 6rem;
+}
+
+.sub-footer {
+  margin: 1.5rem;
+}
+
+.sub-footer a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #434745;
+}
+
+.sub-footer a:hover {
+  color: #272928;
+}
+
+.break-title {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .break-title {
+    display: block;
+  }
+}

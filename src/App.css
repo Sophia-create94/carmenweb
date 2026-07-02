@@ -1,0 +1,55 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+html {
+  --primary-color: #FFD95A;
+  --highlight-primary-color: #C09100;
+}
+
+body {
+  margin-top: 4rem;
+  padding: 0;
+  color: #434745;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans",sans-serif,"google";
+}
+
+@media (min-width: 0px) and (max-width: 1024px) {
+  body {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0rem;
+
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  body {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
+
+@media (min-width: 1441px) {
+  body {
+    margin-left: 18rem;
+    margin-right: 18rem;
+  }
+}
+
+.page-content {
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+}
+
+p, li, a {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  color: #161817;
+}

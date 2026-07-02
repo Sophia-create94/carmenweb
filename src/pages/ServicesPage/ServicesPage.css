@@ -1,0 +1,36 @@
+.services-image-gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.services-image-gallery .image-gallery {
+  max-width: 600px;
+}
+
+.services-image-gallery .image-gallery-thumbnail {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.services-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.service-item {
+  margin: 5px 0;
+}
+
+.services-image-lateral {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .services-image-lateral {
+    display: none;
+  }
+}

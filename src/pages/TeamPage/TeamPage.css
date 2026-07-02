@@ -1,0 +1,43 @@
+.team-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.team-member {
+  display: flex;
+  align-items: start;
+  gap: 4rem;
+  width: 100%;
+}
+
+.team-image {
+  width: 12rem;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.team-name {
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.team-role {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}

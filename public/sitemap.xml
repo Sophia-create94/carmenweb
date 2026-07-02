@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  NOTE: These clean URLs become crawlable once routing is switched from
-  HashRouter to BrowserRouter (SEO report item #1). Until then the live
-  URLs use a "#" fragment (e.g. /#/team) which cannot be listed in a sitemap.
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.drcarmenmueller.de/</loc>

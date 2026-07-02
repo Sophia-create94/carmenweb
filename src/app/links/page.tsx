@@ -1,4 +1,12 @@
-import "./LinksPage.css";
+import type { Metadata } from "next";
+import "@/styles/LinksPage.css";
+
+export const metadata: Metadata = {
+  title: "Links",
+  description:
+    "Nützliche Links rund um Kindergesundheit, Vorsorge und Ernährung – empfohlen von der Kinderarztpraxis Dr. Carmen Müller.",
+  alternates: { canonical: "/links" },
+};
 
 const links = [
   {
@@ -39,7 +47,7 @@ const links = [
   },
 ];
 
-const LinksPage = () => {
+export default function LinksPage() {
   return (
     <div className="page-content links-content">
       <div className="links-list">
@@ -59,6 +67,4 @@ const LinksPage = () => {
       </div>
     </div>
   );
-};
-
-export default LinksPage;
+}

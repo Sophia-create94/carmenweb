@@ -1,16 +1,16 @@
-@import "~react-image-gallery/styles/css/image-gallery.css";
-
 html {
   --primary-color: #FFD95A;
   --highlight-primary-color: #C09100;
 }
 
 body {
-  margin-top: 4rem;
+  margin: 4rem 0 0 0;
   padding: 0;
   color: #434745;
   box-sizing: border-box;
-  font-family: "Alegreya Sans",sans-serif,"google";
+  font-family: var(--font-alegreya), "Alegreya Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media (min-width: 0px) and (max-width: 1024px) {
@@ -18,7 +18,6 @@ body {
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0rem;
-
   }
 }
 
@@ -52,4 +51,22 @@ p, li, a {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   color: #161817;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Visually hidden but available to screen readers and search engines */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

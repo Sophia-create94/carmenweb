@@ -1,13 +1,19 @@
-import React from "react";
-import "./AboutPage.css";
-import ContantData from "../../components/ContactData/ContantData";
+import type { Metadata } from "next";
+import ContactData from "@/components/ContactData";
+import "@/styles/AboutPage.css";
 
-const AboutPage = () => {
+export const metadata: Metadata = {
+  title: "Impressum",
+  description:
+    "Impressum, Öffnungszeiten und rechtliche Angaben der Kinder- & Jugendarztpraxis Dr. med. Carmen Müller in Heidelberg.",
+  alternates: { canonical: "/about" },
+};
+
+export default function AboutPage() {
   return (
     <div className="page-content about-container">
-
-      <h1 className="subtitle">Praxis</h1>
-      <ContantData />
+      <h2 className="subtitle">Praxis</h2>
+      <ContactData />
 
       <h2 className="subtitle">Öffnungszeiten</h2>
       <div className="section">
@@ -68,6 +74,4 @@ const AboutPage = () => {
       </div>
     </div>
   );
-};
-
-export default AboutPage;
+}

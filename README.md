@@ -3,74 +3,93 @@
 Website for the pediatric practice of **Dr. med. Carmen Müller**, Fachärztin für
 Kinderheilkunde und Jugendmedizin, in Heidelberg, Germany.
 
-A single-page application built with **React 18** and **TypeScript** that presents
-the practice, its team, its range of medical services, opening information and
-contact details to patients and their families.
+Built with **Next.js (App Router)** and **TypeScript**. All pages are
+statically pre-rendered (SSG), so the content is present in the HTML for search
+engines and social crawlers, and every page has its own real URL.
+
+## Practice information
+
+- **Dr. med. Carmen Müller** — Fachärztin für Kinderheilkunde und Jugendmedizin
+- Dossenheimer Landstr. 40, 69121 Heidelberg
+- Tel.: 06221 412450 · Fax: 06221 4348260
+- Email: praxisteammueller@web.de
 
 ## Pages
 
-The site uses client-side routing (`HashRouter`) with the following pages:
+| Route              | Menu label         | Content                                          |
+| ------------------ | ------------------ | ------------------------------------------------ |
+| `/`                | Startseite         | Welcome message and a gallery of the practice    |
+| `/vor-ihrem-besuch`| Vor Ihrem Besuch   | Information for patients before their visit       |
+| `/team`            | Team               | The practice team                                |
+| `/leistungen`      | Leistungen         | Full list of medical services offered            |
+| `/links`           | Links              | Useful external links                            |
+| `/notfalle`        | Notfälle           | Emergency contacts and information               |
+| `/contact`         | Kontakt            | Address, phone, fax and email                    |
+| `/about`           | Impressum          | Legal notice / imprint and opening hours         |
 
-| Route              | Menu label         | Content                                                        |
-| ------------------ | ------------------ | ------------------------------------------------------------- |
-| `/`                | Startseite         | Welcome message and a gallery of the practice                 |
-| `/vor-ihrem-besuch`| Vor Ihrem Besuch   | Information for patients before their visit                    |
-| `/team`            | Team               | The practice team                                             |
-| `/leistungen`      | Leistungen         | Full list of medical services offered                         |
-| `/links`           | Links              | Useful external links                                        |
-| `/notfalle`        | Notfälle           | Emergency contacts and information                            |
-| `/contact`         | Kontakt            | Address, phone, fax and email                                |
-| `/about`           | —                  | About the practice                                           |
-
-The layout provides a shared navigation bar (with a mobile menu), footer and a
-scroll-to-top button across all pages.
+The root layout ([src/app/layout.tsx](src/app/layout.tsx)) provides a shared
+header, navigation bar (with a mobile menu), footer, scroll-to-top button and a
+popup across all pages. It also holds the site-wide SEO metadata and the
+`MedicalClinic` JSON-LD structured data.
 
 ## Tech stack
 
-- [React 18](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/)
-- [React Router](https://reactrouter.com/) (`react-router-dom` v7) for routing
+- [Next.js 14](https://nextjs.org/) (App Router) with [TypeScript](https://www.typescriptlang.org/)
+- [React 18](https://react.dev/)
 - [react-image-gallery](https://github.com/xiaolin/react-image-gallery) for image galleries
-- Bootstrapped with [Create React App](https://create-react-app.dev/) (`react-scripts`)
-- Plain CSS (one stylesheet per component/page)
+- [next/font](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) for the Alegreya Sans web font
+- Plain CSS (one stylesheet per component/page, in `src/styles/`)
 
 ## Getting started
 
-Requires [Node.js](https://nodejs.org/) (a recent LTS version) and npm.
+Requires [Node.js](https://nodejs.org/) 18.18+ and npm.
 
 ```bash
 # Install dependencies
 npm install
 
 # Start the development server at http://localhost:3000
-npm start
+npm run dev
 ```
-
-The page reloads automatically when you edit the source, and lint errors are
-shown in the console.
 
 ## Available scripts
 
-| Command         | Description                                                       |
-| --------------- | ---------------------------------------------------------------- |
-| `npm start`     | Run the app in development mode at http://localhost:3000          |
-| `npm test`      | Launch the test runner in interactive watch mode                 |
-| `npm run build` | Build an optimized production bundle into the `build/` folder     |
+| Command         | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| `npm run dev`   | Run the app in development mode at http://localhost:3000     |
+| `npm run build` | Create an optimized production build                         |
+| `npm run start` | Serve the production build locally                           |
+| `npm run lint`  | Run ESLint                                                   |
 
 ## Project structure
 
 ```
+public/
+├── img/                  # Images (practice, team and services galleries)
+├── logo.png              # Stable logo used for Open Graph / social sharing
+├── logo192.png / 512.png # PWA icons
+├── manifest.json         # Web app manifest
+├── robots.txt            # References the sitemap
+└── sitemap.xml           # Sitemap of all pages
 src/
-├── App.tsx                # Route definitions
-├── index.tsx             # App entry point
-├── components/           # Reusable components (ContactData, Popup)
-├── pages/                # One folder per page, each with its .tsx and .css
-│   └── LayoutPage/       # Shared layout: Navbar, Footer, ScrollToTopButton
-├── enums/                # Shared enums
-└── img/                  # Images (practice, team and services galleries)
+├── app/                  # App Router: one folder per route + layout.tsx
+│   ├── layout.tsx        # Root layout: header, nav, footer, metadata, JSON-LD
+│   └── <route>/page.tsx  # One page per route (statically rendered)
+├── components/           # Navbar, Footer, Popup, galleries, ContactData, …
+└── styles/               # One CSS file per page/component + globals.css
 ```
 
-## Deployment
+Interactive pieces (navigation menu, image galleries, popup, scroll-to-top) are
+client components (`"use client"`); the rest render on the server as static HTML.
 
-Run `npm run build` to produce a static, optimized bundle in the `build/`
-folder, which can be served by any static host. Because routing uses
-`HashRouter`, no special server-side rewrite configuration is required.
+## Deployment (Vercel)
+
+The project is deployed on [Vercel](https://vercel.com/), which auto-detects
+Next.js — no build configuration is required. Pushing to the default branch
+triggers a new deployment.
+
+To deploy your own instance: import the GitHub repository in Vercel and deploy.
+When using a custom domain, update the `SITE_URL` constant in
+[src/app/layout.tsx](src/app/layout.tsx) and the URLs in
+[public/sitemap.xml](public/sitemap.xml) / [public/robots.txt](public/robots.txt)
+so canonical tags, Open Graph URLs and the sitemap point at the live domain.

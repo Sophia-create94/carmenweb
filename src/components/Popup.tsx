@@ -1,6 +1,7 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
-import "./Popup.css";
-import { PopupEnum } from "../../enums/common-enums";
+import "@/styles/Popup.css";
 
 const Dialog: React.FC<{
   open: boolean;
@@ -32,28 +33,23 @@ const Popup = () => {
   const [htmlContent, setHtmlContent] = useState<string | null>(null);
 
   useEffect(() => {
-    const hasOpened = localStorage.getItem(PopupEnum.PopupShown);
+    fetch(
+      "https://docs.google.com/document/d/e/2PACX-1vQBDy5XvY6XeXrLdG8AXXUUMpqkwfQDOgxXlByOj3H11zElOwlYg9jOJTPuqxmRcPAN8AZfych5m6Hh/pub?output=html"
+    )
+      .then((res) => res.text())
+      .then((html) => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+        const contents = doc.querySelector("#contents");
 
-    if (!hasOpened) {
-      fetch(
-        "https://docs.google.com/document/d/e/2PACX-1vQBDy5XvY6XeXrLdG8AXXUUMpqkwfQDOgxXlByOj3H11zElOwlYg9jOJTPuqxmRcPAN8AZfych5m6Hh/pub?output=html"
-      )
-        .then((res) => res.text())
-        .then((html) => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-          const contents = doc.querySelector("#contents");
-
-          if (contents) {
-            setHtmlContent(contents.innerHTML);
-            setIsOpen(true);
-            localStorage.setItem(PopupEnum.PopupShown, "true");
-          }
-        })
-        .catch((err) => {
-          console.error("Error loading Google Doc:", err);
-        });
-    }
+        if (contents) {
+          setHtmlContent(contents.innerHTML);
+          setIsOpen(true);
+        }
+      })
+      .catch((err) => {
+        console.error("Error loading Google Doc:", err);
+      });
   }, []);
 
   return (

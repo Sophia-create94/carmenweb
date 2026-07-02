@@ -1,51 +1,53 @@
-import React from "react";
-import "./TeamPage.css";
-import imgCarmen from "../../img/team-gallery/Team-Carmen.jpeg";
-import imgSeyma from "../../img/team-gallery/Team-Seyma.jpeg";
-import imgMaria from "../../img/team-gallery/Team-Maria.jpg";
-import imgChiara from "../../img/team-gallery/Team-Chiara.jpeg";
-import imgSafia from "../../img/team-gallery/Team-Safia.jpeg";
-import noPicture from "../../img/team-gallery/no-picture.png";
+import type { Metadata } from "next";
+import "@/styles/TeamPage.css";
+
+export const metadata: Metadata = {
+  title: "Praxisteam",
+  description:
+    "Lernen Sie das Team der Kinder- & Jugendarztpraxis Dr. med. Carmen Müller in Heidelberg kennen.",
+  alternates: { canonical: "/team" },
+};
 
 const teamMembers = [
   {
-    image: imgCarmen,
+    image: "/img/team-gallery/Team-Carmen.jpeg",
     name: "Dr. med. Carmen Müller",
     role: "Fachärztin für Kinderheilkunde und Jugendmedizin",
   },
   {
-    image: imgSeyma,
+    image: "/img/team-gallery/Team-Seyma.jpeg",
     name: "Seyma Yilmaz",
     role: "Leitende Medizinische Fachangestellte",
   },
   {
-    image: imgMaria,
+    image: "/img/team-gallery/Team-Maria.jpg",
     name: "Maria Pucci-Hidalgo",
     role: "Medizinische Fachangestellte",
   },
   {
-    image: imgChiara,
+    image: "/img/team-gallery/Team-Chiara.jpeg",
     name: "Chiara-Sophi Lauricella",
     role: "Auszubildende zur MFA",
   },
   {
-    image: imgSafia,
+    image: "/img/team-gallery/Team-Safia.jpeg",
     name: "Safia Tair",
     role: "Auszubildende zur MFA",
   },
   {
-    image: noPicture,
+    image: "/img/team-gallery/no-picture.png",
     name: "Malek Malki",
     role: "Praxisassistentin",
   },
 ];
 
-const TeamPage = () => {
+export default function TeamPage() {
   return (
     <div className="page-content team-section">
       <h2 className="page-title">Praxisteam</h2>
-      {teamMembers.map((member, index) => (
-        <div className="team-member" key={index}>
+      {teamMembers.map((member) => (
+        <div className="team-member" key={member.name}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={member.image} alt={member.name} className="team-image" />
           <div className="team-info">
             <h3 className="team-name">{member.name}</h3>
@@ -55,6 +57,4 @@ const TeamPage = () => {
       ))}
     </div>
   );
-};
-
-export default TeamPage;
+}

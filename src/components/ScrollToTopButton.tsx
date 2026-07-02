@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "./ScrollToTopButton.css";
-import topArrowIcon from "../../../img/icons/top-arrow.png";
+"use client";
+
+import { useState, useEffect } from "react";
+import "@/styles/ScrollToTopButton.css";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,7 +9,8 @@ const ScrollToTopButton = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Check if the user has reached the bottom of the page
-      const reachedBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+      const reachedBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight;
       setIsVisible(reachedBottom);
     };
 
@@ -26,9 +28,14 @@ const ScrollToTopButton = () => {
   };
 
   return (
-      <button className={`scroll-to-top ${isVisible ? 'show' : ''}`} onClick={scrollToTop}>
-        <img src={topArrowIcon} alt="" />
-      </button>
+    <button
+      className={`scroll-to-top ${isVisible ? "show" : ""}`}
+      onClick={scrollToTop}
+      aria-label="Nach oben scrollen"
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/img/icons/top-arrow.png" alt="" />
+    </button>
   );
 };
 

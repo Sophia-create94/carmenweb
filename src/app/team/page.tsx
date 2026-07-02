@@ -34,11 +34,6 @@ const teamMembers = [
     name: "Safia Tair",
     role: "Auszubildende zur MFA",
   },
-  {
-    image: "/img/team-gallery/no-picture.png",
-    name: "Malek Malki",
-    role: "Praxisassistentin",
-  },
 ];
 
 export default function TeamPage() {

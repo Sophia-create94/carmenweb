@@ -29,7 +29,7 @@ const Navbar = () => {
         <button 
           className={`nav-toggle ${isMobileOpen ? "toggle-open" : "toggle-closed"}`} 
           onClick={() => setIsMobileOpen(!isMobileOpen)}
-          aria-label="Menú"
+          aria-label="Menü"
         >
           {isMobileOpen ? "✕" : "☰"}
         </button>

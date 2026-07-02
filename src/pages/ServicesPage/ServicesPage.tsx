@@ -13,21 +13,29 @@ const ServicesPage = () => {
       original: imgGallery1,
       thumbnail: imgGallery1,
       originalWidth: 500,
+      originalAlt: "Leistungen der Kinderarztpraxis Dr. Carmen Müller – Bild 1",
+      thumbnailAlt: "Leistungen der Kinderarztpraxis – Vorschaubild 1",
     },
     {
       original: imgGallery2,
       thumbnail: imgGallery2,
       originalWidth: 500,
+      originalAlt: "Leistungen der Kinderarztpraxis Dr. Carmen Müller – Bild 2",
+      thumbnailAlt: "Leistungen der Kinderarztpraxis – Vorschaubild 2",
     },
     {
       original: imgGallery3,
       thumbnail: imgGallery3,
       originalWidth: 500,
+      originalAlt: "Leistungen der Kinderarztpraxis Dr. Carmen Müller – Bild 3",
+      thumbnailAlt: "Leistungen der Kinderarztpraxis – Vorschaubild 3",
     },
     {
       original: imgGallery4,
       thumbnail: imgGallery4,
       originalWidth: 500,
+      originalAlt: "Leistungen der Kinderarztpraxis Dr. Carmen Müller – Bild 4",
+      thumbnailAlt: "Leistungen der Kinderarztpraxis – Vorschaubild 4",
     },
   ];
 
@@ -77,7 +85,7 @@ const ServicesPage = () => {
             ))}
           </ul>
         </div>
-        <img className="services-image-lateral" src={imgLateral} alt="Services" />
+        <img className="services-image-lateral" src={imgLateral} alt="Behandlungsraum der Kinderarztpraxis Dr. Carmen Müller" />
       </div>
   </div>
   );

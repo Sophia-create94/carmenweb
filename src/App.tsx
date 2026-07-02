@@ -17,7 +17,6 @@ import { PopupEnum } from "./enums/common-enums";
 
 function App() {
 
-  console.log('App render');
   //clean localStorage
   localStorage.removeItem(PopupEnum.PopupShown);
   

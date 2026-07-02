@@ -14,7 +14,7 @@ const Layout = () => {
       <Popup />
       <div className="header">
         <Link to="/">
-          <img className="logo" src={logo} alt=""  />
+          <img className="logo" src={logo} alt="Logo Kinder- & Jugendarztpraxis Dr. med. Carmen Müller" />
         </Link>
         <Link to="/" className="title-link">
           <h1>

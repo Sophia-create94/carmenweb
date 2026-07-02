@@ -28,14 +28,20 @@ const HomePage = () => {
     {
       original: image1,
       thumbnail: image1,
+      originalAlt: "Kinderarztpraxis Dr. Carmen Müller in Heidelberg – Ansicht 1",
+      thumbnailAlt: "Kinderarztpraxis Dr. Carmen Müller – Vorschaubild 1",
     },
     {
       original: image2,
       thumbnail: image2,
+      originalAlt: "Kinderarztpraxis Dr. Carmen Müller in Heidelberg – Ansicht 2",
+      thumbnailAlt: "Kinderarztpraxis Dr. Carmen Müller – Vorschaubild 2",
     },
     {
       original: image3,
       thumbnail: image3,
+      originalAlt: "Kinderarztpraxis Dr. Carmen Müller in Heidelberg – Ansicht 3",
+      thumbnailAlt: "Kinderarztpraxis Dr. Carmen Müller – Vorschaubild 3",
     },
   ];
   
@@ -52,6 +58,7 @@ const HomePage = () => {
         />
       </section>
       <section>
+        <h2 className="page-title visually-hidden">Willkommen in unserer Kinder- & Jugendarztpraxis</h2>
         <p onClick={handleTitleClick}>Liebe Eltern!</p>
 
         {showCapy && <iframe src="https://giphy.com/embed/Y00mF6fy4LJdDFeN5M" className="capy-gif" title="capy-gif"></iframe>}

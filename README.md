@@ -1,46 +1,83 @@
-# Getting Started with Create React App
+# Kinderarztpraxis Dr. Carmen Müller — Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Website for the pediatric practice of **Dr. med. Carmen Müller**, Fachärztin für
+Kinderheilkunde und Jugendmedizin, in Heidelberg, Germany.
 
-## Available Scripts
+A single-page application built with **React 18** and **TypeScript** that presents
+the practice, its team, its range of medical services, opening information and
+contact details to patients and their families.
 
-In the project directory, you can run:
+## Practice information
 
-### `npm start`
+- **Dr. med. Carmen Müller** — Fachärztin für Kinderheilkunde und Jugendmedizin
+- Dossenheimer Landstr. 40, 69121 Heidelberg
+- Tel.: 06221 412450 · Fax: 06221 4348260
+- Email: praxisteammueller@web.de
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Pages
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The site uses client-side routing (`HashRouter`) with the following pages:
 
-### `npm test`
+| Route              | Menu label         | Content                                                        |
+| ------------------ | ------------------ | ------------------------------------------------------------- |
+| `/`                | Startseite         | Welcome message and a gallery of the practice                 |
+| `/vor-ihrem-besuch`| Vor Ihrem Besuch   | Information for patients before their visit                    |
+| `/team`            | Team               | The practice team                                             |
+| `/leistungen`      | Leistungen         | Full list of medical services offered                         |
+| `/links`           | Links              | Useful external links                                        |
+| `/notfalle`        | Notfälle           | Emergency contacts and information                            |
+| `/contact`         | Kontakt            | Address, phone, fax and email                                |
+| `/about`           | —                  | About the practice                                           |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The layout provides a shared navigation bar (with a mobile menu), footer and a
+scroll-to-top button across all pages.
 
-### `npm run build`
+## Tech stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [React 18](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/)
+- [React Router](https://reactrouter.com/) (`react-router-dom` v7) for routing
+- [react-image-gallery](https://github.com/xiaolin/react-image-gallery) for image galleries
+- Bootstrapped with [Create React App](https://create-react-app.dev/) (`react-scripts`)
+- Plain CSS (one stylesheet per component/page)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Requires [Node.js](https://nodejs.org/) (a recent LTS version) and npm.
 
-### `npm run eject`
+```bash
+# Install dependencies
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Start the development server at http://localhost:3000
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The page reloads automatically when you edit the source, and lint errors are
+shown in the console.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Available scripts
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+| Command         | Description                                                       |
+| --------------- | ---------------------------------------------------------------- |
+| `npm start`     | Run the app in development mode at http://localhost:3000          |
+| `npm test`      | Launch the test runner in interactive watch mode                 |
+| `npm run build` | Build an optimized production bundle into the `build/` folder     |
 
-## Learn More
+## Project structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+src/
+├── App.tsx                # Route definitions
+├── index.tsx             # App entry point
+├── components/           # Reusable components (ContactData, Popup)
+├── pages/                # One folder per page, each with its .tsx and .css
+│   └── LayoutPage/       # Shared layout: Navbar, Footer, ScrollToTopButton
+├── enums/                # Shared enums
+└── img/                  # Images (practice, team and services galleries)
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment
+
+Run `npm run build` to produce a static, optimized bundle in the `build/`
+folder, which can be served by any static host. Because routing uses
+`HashRouter`, no special server-side rewrite configuration is required.

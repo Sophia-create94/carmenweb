@@ -7,13 +7,6 @@ A single-page application built with **React 18** and **TypeScript** that presen
 the practice, its team, its range of medical services, opening information and
 contact details to patients and their families.
 
-## Practice information
-
-- **Dr. med. Carmen Müller** — Fachärztin für Kinderheilkunde und Jugendmedizin
-- Dossenheimer Landstr. 40, 69121 Heidelberg
-- Tel.: 06221 412450 · Fax: 06221 4348260
-- Email: praxisteammueller@web.de
-
 ## Pages
 
 The site uses client-side routing (`HashRouter`) with the following pages:

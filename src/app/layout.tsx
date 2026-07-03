@@ -67,6 +67,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   manifest: "/manifest.json",
+  verification: {
+    google: "rnJ24DgjsaDyHnsIEdIHwXfMQzdBMRhv4b7hDWDt5Uw",
+  },
 };
 
 const jsonLd = {

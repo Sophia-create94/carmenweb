@@ -30,6 +30,11 @@ yarn-error.log*
 # vercel
 .vercel
 
+# deployment secrets (never commit FTP credentials)
+.env.deploy.local
+.netrc
+.ftp-deploy-sync-state.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

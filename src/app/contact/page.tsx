@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Kontakt",
   description:
     "Kontakt, Adresse und Anfahrt zur Kinder- & Jugendarztpraxis Dr. med. Carmen Müller, Dossenheimer Landstr. 40, 69121 Heidelberg.",
-  alternates: { canonical: "/contact" },
+  alternates: { canonical: "/contact/" },
 };
 
 export default function ContactPage() {

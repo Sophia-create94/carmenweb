@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Impressum",
   description:
     "Impressum, Öffnungszeiten und rechtliche Angaben der Kinder- & Jugendarztpraxis Dr. med. Carmen Müller in Heidelberg.",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "/about/" },
 };
 
 export default function AboutPage() {

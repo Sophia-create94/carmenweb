@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Leistungen",
   description:
     "Unser Leistungsspektrum: Vorsorgeuntersuchungen U2–U11, J1/J2, Impfungen, Sonographie, EKG, Lungenfunktion, Allergiediagnostik und mehr.",
-  alternates: { canonical: "/leistungen" },
+  alternates: { canonical: "/leistungen/" },
 };
 
 const services = [

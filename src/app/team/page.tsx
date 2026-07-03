@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Praxisteam",
   description:
     "Lernen Sie das Team der Kinder- & Jugendarztpraxis Dr. med. Carmen Müller in Heidelberg kennen.",
-  alternates: { canonical: "/team" },
+  alternates: { canonical: "/team/" },
 };
 
 const teamMembers = [

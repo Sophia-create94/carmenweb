@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Links",
   description:
     "Nützliche Links rund um Kindergesundheit, Vorsorge und Ernährung – empfohlen von der Kinderarztpraxis Dr. Carmen Müller.",
-  alternates: { canonical: "/links" },
+  alternates: { canonical: "/links/" },
 };
 
 const links = [

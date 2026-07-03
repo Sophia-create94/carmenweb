@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Notfälle",
   description:
     "Notfallnummern und kinder- & jugendärztlicher Bereitschaftsdienst in Heidelberg außerhalb der Sprechzeiten der Praxis Dr. Carmen Müller.",
-  alternates: { canonical: "/notfalle" },
+  alternates: { canonical: "/notfalle/" },
 };
 
 export default function EmergenciesPage() {

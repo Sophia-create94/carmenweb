@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Vor Ihrem Besuch",
   description:
     "Wichtige Hinweise für Ihren Besuch in der Kinderarztpraxis Dr. Carmen Müller: Terminvereinbarung, mitzubringende Unterlagen und Parkmöglichkeiten.",
-  alternates: { canonical: "/vor-ihrem-besuch" },
+  alternates: { canonical: "/vor-ihrem-besuch/" },
 };
 
 export default function BeforeYouComePage() {

@@ -1,0 +1,21 @@
+# Canonical host + HTTPS for drcarmenmueller.de
+# Goal: every request ends up on https://www.drcarmenmueller.de/... in a single
+# 301 hop, with no redirect loops.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1) Non-www -> www (redirect straight to the https www host).
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^ https://www.drcarmenmueller.de%{REQUEST_URI} [L,R=301]
+
+  # 2) Force HTTPS. Only redirect when NEITHER the proxy header NOR the HTTPS
+  #    var indicates a secure request, which avoids loops on setups that
+  #    terminate TLS upstream.
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://www.drcarmenmueller.de%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Serve the static export's 404 page for unknown URLs.
+ErrorDocument 404 /404.html

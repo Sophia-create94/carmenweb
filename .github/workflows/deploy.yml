@@ -42,10 +42,15 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./out/
-          # Target directory on the server. Set the repo variable
-          # FTP_SERVER_DIR (must end with "/") if the web root is not the
-          # FTP user's home. Defaults to the FTP home directory.
-          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
+          # Web root on All-Inkl. The main FTP account lands at "/", and the
+          # site lives in "/drcarmenmueller.de/". Override via the repo variable
+          # FTP_SERVER_DIR (must end with "/") if you use a directory-scoped
+          # FTP user whose home is already the web root.
+          server-dir: ${{ vars.FTP_SERVER_DIR || '/drcarmenmueller.de/' }}
+          # SAFETY: never enable `dangerous-clean-slate` here. The web root also
+          # contains server-managed folders (admin/, config/, webmail/) that must
+          # NOT be deleted. This action only ever touches files it uploaded, so
+          # those folders are left untouched as long as clean-slate stays off.
           # Files on the server to never touch (state file is managed by the action).
           exclude: |
             **/.git*

@@ -18,6 +18,12 @@
   font-size: 16px;
 }
 
+/* Keep the email link the same 16px as the surrounding footer text
+   (overrides the global `a { font-size: 18px }` rule). */
+.footer-container p a {
+  font-size: 16px;
+}
+
 .contact-info-section {
   flex: 1;
   margin: 0 10px;

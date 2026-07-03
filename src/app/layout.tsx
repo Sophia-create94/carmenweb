@@ -154,12 +154,10 @@ export default function RootLayout({
               alt="Logo Kinder- & Jugendarztpraxis Dr. med. Carmen Müller"
             />
           </Link>
-          <Link href="/" className="title-link">
-            <h1>
-              Kinder- &amp; Jugendarztpraxis <br className="break-title" /> Dr.
-              med. Carmen Müller
-            </h1>
-          </Link>
+          <h1 className="site-title">
+            Kinder- &amp; Jugendarztpraxis <br className="break-title" /> Dr.
+            med. Carmen Müller
+          </h1>
         </div>
 
         <Navbar />

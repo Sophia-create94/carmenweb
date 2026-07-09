@@ -27,7 +27,7 @@ const teamMembers = [
   {
     image: "/img/team-gallery/Team-Chiara.jpeg",
     name: "Chiara-Sophi Lauricella",
-    role: "Auszubildende zur MFA",
+    role: "Medizinische Fachangestellte",
   },
   {
     image: "/img/team-gallery/Team-Safia.jpeg",

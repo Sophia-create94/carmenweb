@@ -75,22 +75,32 @@ const HomeContent = () => {
         </p>
 
         <p>
-          Wir freuen uns darauf, Ihre Kinder medizinisch betreuen zu dürfen und
-          heißen auch neue Patient/innen herzlich willkommen! Dabei legen wir
-          großen Wert auf eine einfühlsame, vertrauensvolle und zuverlässige
-          Betreuung. Ihre Kinder stehen bei uns im Mittelpunkt – mit Empathie und
-          Fachwissen sorgen wir für die bestmögliche medizinische Versorgung.
+          Wir freuen uns darauf, Ihre Kinder medizinisch betreuen zu dürfen.
+          Dabei legen wir großen Wert auf eine einfühlsame, vertrauensvolle und
+          zuverlässige Betreuung. Ihre Kinder stehen bei uns im Mittelpunkt – mit
+          Empathie und Fachwissen sorgen wir für die bestmögliche medizinische
+          Versorgung.
         </p>
 
         <p>
           Ihre Zufriedenheit, das Wohl Ihrer Kinder und das Gefühl, sich bei uns
-          gut aufgehoben zu wissen, sind unser höchstes Anliegen. Bei uns haben
-          Sie stets eine feste Ansprechpartnerin als Ärztin.
+          gut aufgehoben zu wissen, sind unser höchstes Anliegen. Bei uns wird Ihr
+          Kind durchgehend persönlich betreut – von mir als Ärztin, Ihrer festen
+          Ansprechpartnerin. So schaffen wir Vertrauen und eine enge Bindung,
+          gerade für die Kleinsten.
         </p>
 
         <p>Vertrauen Sie auf unsere Expertise und unser Engagement.</p>
 
         <p>Dr. Carmen Müller &amp; Team</p>
+
+        <div className="new-patients-box">
+          <p className="np-title">🧸 Neue Patient/innen herzlich willkommen!</p>
+          <p>
+            Wir freuen uns darauf, Sie und Ihr Kind kennenzulernen. Vereinbaren
+            Sie einfach telefonisch einen Termin – wir sind gerne für Sie da.
+          </p>
+        </div>
       </section>
     </div>
   );

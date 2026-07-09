@@ -21,17 +21,28 @@ const Footer = () => {
           </p>
           <p>
             <strong>Mittwoch</strong>
-            <br /> 09:00 - 12:00 Uhr
+            <br /> 9:00 - 12:00 Uhr
           </p>
           <p>
             <strong>Freitag</strong>
-            <br /> 09:00 - 14:00 Uhr
+            <br /> 9:00 - 14:00 Uhr
           </p>
         </div>
 
         <div className="contact-info-section">
-          <h2>Telefonische Erreichbarkeit</h2>
-          <p>Beginn jeweils eine halbe Stunde vor Praxis-Öffnung.</p>
+          <h2>Telefon</h2>
+          <p>
+            <strong>Montag, Dienstag &amp; Donnerstag</strong>
+            <br /> 8:00 - 13:00 Uhr &amp; 14:00 - 18:00 Uhr
+          </p>
+          <p>
+            <strong>Mittwoch</strong>
+            <br /> 8:00 - 13:00 Uhr
+          </p>
+          <p>
+            <strong>Freitag</strong>
+            <br /> 8:00 - 14:00 Uhr
+          </p>
         </div>
       </div>
 

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import { Alegreya_Sans } from "next/font/google";
 
 import "@/styles/globals.css";
@@ -172,11 +171,6 @@ export default function RootLayout({
           </Link>
           <ScrollToTopButton />
         </div>
-
-        <Script
-          src="//script.crazyegg.com/pages/scripts/0114/1593.js"
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

@@ -36,6 +36,37 @@
   border: 1px solid #000;
 }
 
+/* Click-to-load placeholder shown until the user loads Google Maps */
+.map-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: #f3f3f3;
+  color: #434745;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.map-placeholder:hover {
+  background-color: #e9e9e9;
+}
+
+.map-placeholder-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #161817;
+  text-decoration: underline;
+}
+
+.map-placeholder-text {
+  font-size: 0.9rem;
+  max-width: 340px;
+}
+
 @media (max-width: 768px) {
   .contact-info {
     flex-direction: column;

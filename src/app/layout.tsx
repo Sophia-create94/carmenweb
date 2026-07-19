@@ -169,6 +169,9 @@ export default function RootLayout({
           <Link className="print" href="/about">
             Impressum
           </Link>
+          <Link className="print" href="/datenschutz">
+            Datenschutz
+          </Link>
           <ScrollToTopButton />
         </div>
       </body>

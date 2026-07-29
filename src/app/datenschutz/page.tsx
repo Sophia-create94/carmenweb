@@ -173,7 +173,48 @@ export default function DatenschutzPage() {
         </p>
       </div>
 
-      <h3 className="subtitle">V. Rechte der betroffenen Person</h3>
+      <h3 className="subtitle">
+        V. Weiterleitung und Datenübermittlung an Doctolib GmbH
+      </h3>
+      <div className="section">
+        <p>
+          Wir haben in unsere Webseite die Möglichkeit eingebunden, Termine über
+          die Webseite der Doctolib GmbH, Mehringdamm 51, 10961 Berlin
+          (Doctolib) online zu vereinbaren.
+        </p>
+        <p>
+          Wenn Sie die Schaltfläche „Termin online buchen" betätigen, werden Sie
+          auf die Webseite von Doctolib weitergeleitet und können dort online
+          eine Terminvereinbarung vornehmen. Obwohl wir selbst keinerlei
+          personenbezogene Daten an Doctolib weiterleiten, kann Doctolib ggf.
+          Rückschlüsse aus der Tatsache ziehen, dass Sie von unserer Webseite
+          kommen. Bevor Sie die Schaltfläche anklicken, findet keine
+          Datenübertragung an Doctolib statt.
+        </p>
+        <p>
+          Mit der Weiterleitung verlassen Sie unsere Webseite. Doctolib betreibt
+          die Webseite von Doctolib und verarbeitet Ihre Daten in eigener
+          Verantwortung und nicht in unserem Auftrag. Wir haben keinerlei
+          Einfluss auf die Gestaltung oder Inhalte der Webseite von Doctolib und
+          machen uns diese auch nicht zu eigen. Ebenso haben wir keinerlei
+          Einfluss auf die Art und den Umfang der durch Doctolib verarbeiteten
+          Daten oder die Weitergabe dieser Daten an Dritte. Wir haben insoweit
+          auch keine effektiven Kontrollmöglichkeiten.
+        </p>
+        <p>
+          Welche Daten von Doctolib erfasst und wie diese genutzt werden,
+          entnehmen Sie bitte den Datenschutzhinweisen von Doctolib:{" "}
+          <a
+            href="https://www.doctolib.de/gesundheit/privatsphaere/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://www.doctolib.de/gesundheit/privatsphaere/
+          </a>
+        </p>
+      </div>
+
+      <h3 className="subtitle">VI. Rechte der betroffenen Person</h3>
       <div className="section">
         <p>
           Werden personenbezogene Daten von Ihnen verarbeitet, sind Sie

@@ -98,7 +98,8 @@ const HomeContent = () => {
           <p className="np-title">🧸 Neue Patient/innen herzlich willkommen!</p>
           <p>
             Wir freuen uns darauf, Sie und Ihr Kind kennenzulernen. Vereinbaren
-            Sie einfach telefonisch einen Termin – wir sind gerne für Sie da.
+            Sie einfach online oder telefonisch einen Termin – wir sind gerne für
+            Sie da.
           </p>
         </div>
       </section>

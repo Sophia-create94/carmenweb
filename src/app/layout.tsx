@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Popup from "@/components/Popup";
+import DoctolibButton from "@/components/DoctolibButton";
 
 const alegreya = Alegreya_Sans({
   subsets: ["latin"],
@@ -143,6 +144,8 @@ export default function RootLayout({
         />
 
         <Popup />
+
+        <DoctolibButton />
 
         <div className="header">
           <Link href="/">

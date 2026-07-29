@@ -29,6 +29,7 @@
   flex-shrink: 0;
   transition: background-color 0.3s ease;
   margin-right: 4rem;
+  overflow-wrap: break-word;
 }
 
 .link-button:hover {
@@ -39,16 +40,24 @@
   color: #333;
   margin: 0;
   flex: 1;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 768px) {
+  .links-list {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .link-item {
     flex-direction: column;
     align-items: flex-start;
   }
 
   .link-button {
-    width: 89%;
+    box-sizing: border-box;
+    width: 100%;
+    margin-right: 0;
     text-align: center;
   }
 }

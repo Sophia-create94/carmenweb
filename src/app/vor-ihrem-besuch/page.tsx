@@ -13,8 +13,7 @@ export default function BeforeYouComePage() {
       <h2 className="page-title">Vor Ihrem Besuch</h2>
 
       <p>
-        Wir bitten Sie, nur nach telefonischer Terminvereinbarung in die Praxis
-        zu kommen.
+        Wir bitten Sie, nur nach Terminvereinbarung in die Praxis zu kommen.
       </p>
 
       <p>

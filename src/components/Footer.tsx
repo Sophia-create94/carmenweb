@@ -7,6 +7,15 @@ const Footer = () => {
       <div className="contact-info">
         <div className="contact-info-section">
           <h2>Kontakt</h2>
+          <p>
+            <a
+              href="https://www.doctolib.de/kinderheilkunde-kinder-und-jugendmedizin/heidelberg/carmen-mueller-heidelberg?utm_campaign=website-button&utm_source=online-booking&utm_medium=referral"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Termin online buchen
+            </a>
+          </p>
           <p><strong>Telefon:</strong> 06221 / 412 450</p>
           <p><strong>Telefax:</strong> 06221 / 434 8260</p>
           <p><strong>E-Mail:</strong> <a href="mailto:praxisteammueller@web.de">praxisteammueller@web.de</a></p>

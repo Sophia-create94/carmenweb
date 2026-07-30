@@ -35,7 +35,7 @@ const DoctolibButton = () => {
         rel="noopener noreferrer"
         aria-label="Termin Online über Doctolib buchen"
       >
-        Termin
+        Termin online buchen
       </a>
     </nav>
   );
